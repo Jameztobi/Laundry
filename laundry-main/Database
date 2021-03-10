@@ -1,0 +1,165 @@
+
+-----------Database Connection details-------------------------------------
+Database Name: laundry
+Database Username: 
+Database Password: 
+
+------------------------Home Page-----------------------------------------
+CREATE TABLE home( HomeID int NOT NULL AUTO_INCREMENT, Content TEXT, images varchar(255), Headers varchar(255), PRIMARY KEY (HomeID) )
+
+INSERT INTO home (Headers, images, content)
+VALUES ('Welcome to the washerman laundry services', 'images/background.jpg', 'We believe that you desire the very best');
+INSERT INTO home (Headers, images, content)
+VALUES ('OUR LAUNDRY SERVICES', 'images', 'Below are some of the key services that we offer');
+
+
+
+--------------------------About Page-----------------------------------
+CREATE TABLE aboutUs( AboutID int NOT NULL AUTO_INCREMENT, Content TEXT, images varchar(255), Headers varchar(255), PRIMARY KEY (AboutID));
+
+INSERT INTO aboutUs (Headers, images, content)
+VALUES ('About Us', 'images/aboutus.jpg', 'The washerman has been in existence for over 10 years and has been of service to different local and international businesses as well as individual clients. Due to our outstanding performance, the washerman won an award as Best Commercial Laundry from the Laundry and Dry-Cleaning Awards in 2018. We always strive for excellence and ensure to provide quality services to our esteemed clients. Our mission and goal is to meet customer satisfaction and international cleaning standards to maintain a win for both customer and company. With numerous years of experience under our belt, be rest assured that the washerman would provide a splendid laundry service to you.
+');
+
+-------------------------- Testimonial-----------------------------------
+CREATE TABLE testimonial( TestimonialID int NOT NULL AUTO_INCREMENT, Content  TEXT, images varchar(255), PRIMARY KEY (TestimonialID));
+
+ALTER TABLE testimonial
+ADD COLUMN Headers VARCHAR(255);
+
+INSERT INTO testimonial (Headers, images, content)
+VALUES ('About Us', 'images/test3.jpg', 'This is a logo');
+
+INSERT INTO testimonial (Headers, images, content)
+VALUES ('David Derek', 'images/test3.jpg', 'They are exceptional and quite resourceful');
+
+INSERT INTO testimonial (Headers, images, content)
+VALUES ('Sean Kelly', 'images/test3.jpg', 'I love their services and staff are quite professional');
+
+INSERT INTO testimonial (Headers, images, content)
+VALUES ('Roselin  James', 'images/test3.jpg', 'On my birthday, I always get a warm message for them.');
+
+
+-------------------------- Contact Us----------------------------------
+CREATE TABLE contactUs( ContactUsID int NOT NULL AUTO_INCREMENT,  images varchar(255), Headers varchar(255), PRIMARY KEY (ContactUsID));
+
+INSERT INTO contactUs (Headers)
+VALUES ('Contact Us');
+
+INSERT INTO contactUs (Headers)
+VALUES ('Our Location');
+
+INSERT INTO contactUs (Headers)
+VALUES ('Dublin Branch');
+
+INSERT INTO contactUs (Headers)
+VALUES ('Cork Branch');
+
+-------------------------- Contact Us details-------------------------
+CREATE TABLE contact_detail( UserID int NOT NULL AUTO_INCREMENT, Message  TEXT, Name  varchar(255), Email varchar(255), Address varchar(255),  PRIMARY KEY (UserID));
+
+INSERT INTO contactUs (name, email, message)
+VALUES ('Contact Us', '', '');
+
+-------------------------- Why Us-------------------------
+CREATE TABLE whyUs( WhyID int NOT NULL AUTO_INCREMENT, Content TEXT, images varchar(255), PRIMARY KEY (WhyID));
+ALTER TABLE whyUs
+ADD COLUMN Headers VARCHAR(255);
+
+INSERT INTO whyUs (Headers, images, Content)
+VALUES ( 'WHY US',  'images/whyus.jpeg', 'We are a group of experts willing to bring a smile to our clients face through our laundry services. We offer the most affordable prices and also provide free pickup and delivery to your very doorstep. Coupled with our low prices ');
+
+-------------------------- objectives--------------------------
+CREATE TABLE objective( ObjectiveID int NOT NULL AUTO_INCREMENT, Content  TEXT, images varchar(255), PRIMARY KEY (ObjectiveID));
+
+ALTER TABLE objectives
+ADD COLUMN Headers VARCHAR(255);
+
+INSERT INTO objective (Headers, images, content)
+VALUES ( 'Take time to care for your clothes',  'images/iron.png', 'Clothes are washed and dried according to colors and fabric texture. Through our years of experience, our workers would ensure your laundry becomes sparkly clean.');
+
+INSERT INTO objective (Headers, images, content)
+VALUES ( 'Offer only the highest level quality',  'images/high-quality.png', 'Our laundry service is second to none as we always make sure to use high quality products and standard processes to provide you your laundry wishes.');
+
+INSERT INTO objective (Headers, images, content)
+VALUES ( 'Use High class Technology',  'images/technology.png', ' We use the latest technology and equipment that are ecofriendly to bring the best out of your laundry and our environment.');
+
+
+INSERT INTO objective (Headers, images, content)
+VALUES ( 'Deliver on time',  'images/delivery.png', 'Your clothes would be delivered to you after 48 hours of pickup from your desired location. Our pickup and delivery buses are located in different areas.');
+
+--------------------------corporatePage----------------------------
+CREATE TABLE corporatePage( CorporateID int NOT NULL AUTO_INCREMENT, Headers  varchar(255), PRIMARY KEY (CorporateID));
+
+INSERT INTO corporatePage (Headers)
+VALUES ('Corporate Cleaning');
+
+INSERT INTO corporatePage (Headers)
+VALUES ('High Quality and Cost effective laundry services');
+
+INSERT INTO corporatePage (Headers)
+VALUES ('Mobile cloth tracking and delivery ');
+
+INSERT INTO corporatePage (Headers)
+VALUES ('Deep clean for offices');
+
+
+--------------------------job_list----------------------------
+CREATE TABLE job_list( ID int NOT NULL AUTO_INCREMENT, list_title  varchar(255), PRIMARY KEY (ID));
+
+INSERT INTO job_list(list_title)
+VALUES ('Towel Rentals');
+
+INSERT INTO job_list(list_title)
+VALUES ('Linen Rentals');
+
+INSERT INTO job_list(list_title)
+VALUES ('Salon Towels');
+
+INSERT INTO job_list(list_title)
+VALUES ('Catering Department');
+
+INSERT INTO job_list(list_title)
+VALUES ('Table Linens');
+
+--------------------------content_imagery------------------------
+CREATE TABLE contact_detail( UserID int NOT NULL AUTO_INCREMENT, Message  TEXT, Name  varchar(255), Email varchar(255), Address varchar(255),  PRIMARY KEY (UserID));
+
+INSERT INTO content_imagery(images)
+VALUES ('images/hotal.jpg');
+
+INSERT INTO content_imagery(images)
+VALUES ('images/bars.jpg');
+
+INSERT INTO content_imagery(images)
+VALUES ('images/restaurant.jpg');
+
+INSERT INTO content_imagery(images)
+VALUES ('images/gym.jpg');
+
+INSERT INTO content_imagery(images)
+VALUES ('images/club.jpg');
+
+INSERT INTO job_list(images)
+VALUES ('images/school.jpg');
+
+INSERT INTO job_list(images)
+VALUES ('images/office.jpg');
+
+INSERT INTO content_imagery(images)
+VALUES ('images/hospital.jpg');
+
+--------------------------prices------------------------
+CREATE TABLE price( priceID int NOT NULL AUTO_INCREMENT,prices int,  stock varchar(55), PRIMARY KEY (priceID));
+
+INSERT INTO price(prices, stock)
+VALUES ( 5 'Shirts');
+INSERT INTO price(prices, stock)
+VALUES ( 5 'suits');
+INSERT INTO price(prices, stock)
+VALUES ( 5 'jeans');
+INSERT INTO price(prices, stock)
+VALUES ( 5 'Jackets');
+INSERT INTO price(prices, stock)
+VALUES ( 5 'linens');
+
