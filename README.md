@@ -1,4 +1,4 @@
-# Laundry
+# Laundry Website
 Document Setup Steps:
 Step 1:  Create a sketched model of the proposed website using Draw.io
 Step 2: Design the database schema
